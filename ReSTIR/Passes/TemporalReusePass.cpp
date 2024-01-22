@@ -59,7 +59,7 @@ void TemporalReusePass::execute(RenderContext* pRenderContext) {
 	auto shaderVars = mpTemporalReuse->getVars();
 	shaderVars["MyCB"]["gFrameCount"] = mFrameCount++;
 	shaderVars["MyCB"]["lastViewProjMat"] = mLastViewProjMatrix;
-	mLastViewProjMatrix = mpScene->getActiveCamera()->getViewProjMatrix();
+	//mLastViewProjMatrix = mpScene->getActiveCamera()->getViewProjMatrix();
 
 	shaderVars["gWsPos"] = myFBO->getColorTexture(0);
 	shaderVars["gWsNorm"] = wsNorm;
